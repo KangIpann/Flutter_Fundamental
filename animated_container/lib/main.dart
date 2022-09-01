@@ -22,7 +22,7 @@ class _MyAppState extends State<MyApp> {
       home: Scaffold(
         appBar: AppBar(title: Text("Animated Container"),),
         body: Center(
-          //Untuk mendeteksi tap
+          //Untuk detector apakah ada sesuatu yang berinteraksi oleh container tsb
           child: GestureDetector(
             onTap: (){
               setState(() {
