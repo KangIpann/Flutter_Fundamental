@@ -94,16 +94,16 @@ class _MyAppState extends State<MyApp> {
                 )
               ],
             ),
-            RaisedButton(
-              child: Text("Reset"),
-                textColor: Colors.white,
-                color: Colors.black.withOpacity(0.6),
-                onPressed: (){
-              setState(() {
-                targetColor = Colors.grey;
-              });
-            }
-            ),
+            // RaisedButton(
+            //   child: Text("Reset"),
+            //     textColor: Colors.white,
+            //     color: Colors.black.withOpacity(0.6),
+            //     onPressed: (){
+            //   setState(() {
+            //     targetColor = Colors.grey;
+            //   });
+            // }
+            // ),
             DragTarget<Color>(
               onWillAccept: (value) => true,
               onAccept: (value) {isAccepted = true; targetColor = value;},
@@ -125,7 +125,17 @@ class _MyAppState extends State<MyApp> {
                   ),
                 );
               },
-            )
+            ),
+            RaisedButton(
+                child: Text("Reset"),
+                textColor: Colors.white,
+                color: Colors.black.withOpacity(0.6),
+                onPressed: (){
+                  setState(() {
+                    targetColor = Colors.grey;
+                  });
+                }
+            ),
           ],
         ),
       ),
